@@ -1,0 +1,220 @@
+/* Reset beberapa default browser styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gaya umum untuk seluruh halaman */
+html, body {
+    height: 100%;
+    overflow-y: auto;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling untuk header */
+#layoutSidenav {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#layoutSidenav_nav {
+    background-color: #343a40;
+    color: #fff;
+}
+
+/* Gaya untuk menu samping */
+.sb-sidenav-menu {
+    padding: 1rem;
+}
+
+.sb-sidenav-menu-heading {
+    color: #adb5bd;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+/* Link aktif dan hover pada menu samping */
+.nav-link.active, .nav-link:hover {
+    background-color: #495057;
+    color: #fff;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link {
+    color: #ced4da;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link .sb-nav-link-icon {
+    margin-right: 0.5rem;
+}
+
+/* Gaya untuk konten utama */
+#layoutSidenav_content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Tambahkan scroll jika konten melebihi tinggi layar */
+}
+
+/* Gaya untuk header konten utama */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Gaya untuk card */
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.card-body {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #fff;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #d1d5db;
+}
+
+/* Gaya untuk card footer */
+.card-footer {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-footer .btn-light {
+    background-color: #fff;
+    color: #495057;
+    border: none;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-footer .btn-light:hover {
+    background-color: #e2e6ea;
+    color: #212529;
+}
+
+/* Tambahkan efek hover pada ikon */
+.card-footer .small {
+    transition: transform 0.3s ease;
+}
+
+.card-footer .small:hover {
+    transform: scale(1.2);
+}
+
+/* Gaya untuk footer */
+footer {
+    background-color: #343a40;
+    color: #adb5bd;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Responsif untuk card layout */
+@media (max-width: 1200px) {
+    .col-xl-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-sm-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Tambahkan gaya untuk peta */
+#map {
+    height: 400px;
+    margin-bottom: 20px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tambahkan gaya tambahan */
+.bg-primary {
+    background-color: #007bff !important;
+}
+
+.bg-success {
+    background-color: #28a745 !important;
+}
+
+.bg-info {
+    background-color: #17a2b8 !important;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+.bg-secondary {
+    background-color: #6c757d !important;
+}
+
+.bg-dark {
+    background-color: #343a40 !important;
+}

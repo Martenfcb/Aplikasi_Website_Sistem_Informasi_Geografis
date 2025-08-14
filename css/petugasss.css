@@ -1,0 +1,244 @@
+/* CSS untuk Dashboard Petugas */
+
+/* Style Global */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Sidebar */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #212529;
+  color: #ffffff;
+  padding: 20px;
+  overflow-y: auto;
+  transition: background-color 0.4s, box-shadow 0.4s;
+  border-right: 2px solid #343a40;
+}
+
+#sidebar h4 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+#sidebar .nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  padding: 12px 15px;
+  border-radius: 10px;
+  transition: background-color 0.4s, color 0.4s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+#sidebar .nav-link:hover {
+  background-color: #495057;
+  color: #e9ecef;
+  transform: scale(1.02);
+}
+
+#sidebar .nav-link.active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Content Area */
+#content {
+  margin-left: 300px;
+  padding: 20px;
+  min-height: 100vh;
+  transition: margin-left 0.4s, padding 0.4s;
+}
+
+#content h1 {
+  margin-top: 20px;
+  color: #343a40;
+  font-weight: 700;
+  font-size: 2.5rem;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 15px;
+}
+
+#content p {
+  color: #6c757d;
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem;
+}
+
+/* Map */
+#map {
+  height: 400px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  border: 2px solid #dee2e6;
+}
+
+/* Card */
+.card {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.4s, transform 0.4s;
+}
+
+.card:hover {
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  font-size: 1.125rem;
+  color: #495057;
+}
+
+/* Form Filter */
+.filter-form {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.4s, transform 0.3s;
+}
+
+.filter-form:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+}
+
+.filter-form .form-control {
+  border-radius: 8px;
+  box-shadow: none;
+  border: 1px solid #ced4da;
+  transition: border-color 0.4s, box-shadow 0.4s;
+}
+
+.filter-form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.filter-form .btn {
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  background-color: #007bff;
+  color: #ffffff;
+  transition: background-color 0.4s, box-shadow 0.4s;
+}
+
+.filter-form .btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Table */
+.table-wrapper {
+  margin-top: 20px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.table th, .table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table th {
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f8f9fa;
+}
+
+/* Modal */
+.modal-content {
+  border-radius: 15px;
+  border: none;
+}
+
+.modal-header {
+  border-bottom: 1px solid #dee2e6;
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 15px 15px 0 0;
+}
+
+.modal-footer {
+  border-top: 1px solid #dee2e6;
+  background-color: #f9f9f9;
+}
+
+/* Button Detail */
+.detail-btn {
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: 600;
+  transition: background-color 0.4s, box-shadow 0.4s;
+  padding: 12px 24px;
+  border: none;
+}
+
+.detail-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 2px solid #343a40;
+  }
+
+  #content {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  #map {
+    height: 300px;
+  }
+}

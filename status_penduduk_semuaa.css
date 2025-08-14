@@ -1,0 +1,314 @@
+/* Gaya umum untuk body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #e2e7ec);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Gaya untuk header */
+header {
+    background-color: #2d3748; /* Darker shade of gray */
+    color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #4a5568;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Gaya untuk kontainer utama */
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Gaya untuk judul */
+h2 {
+    color: #2b6cb0; /* Blue color */
+    margin: 20px 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk formulir filter */
+.filter-form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-form select,
+.filter-form input,
+.filter-form button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #edf2f7;
+    color: #2d3748;
+    transition: all 0.3s ease;
+}
+
+.filter-form select:hover,
+.filter-form input:hover,
+.filter-form button:hover {
+    background-color: #e2e7ec;
+    border-color: #2b6cb0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filter-form button {
+    background-color: #2b6cb0; /* Blue color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.filter-form button:hover {
+    background-color: #1e4a7a;
+}
+
+/* Gaya untuk tabel */
+.table-wrapper {
+    overflow-x: auto;
+    padding: 0 10px;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e2e7ec;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+th {
+    background-color: #2b6cb0; /* Blue color */
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e2e7ec;
+}
+
+td img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 2% auto; /* Margin atas dan bawah yang lebih kecil */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 900px; /* Memperbesar lebar maksimum modal */
+    max-height: 80%; /* Mengatur tinggi maksimum modal */
+    overflow-y: auto; /* Menambahkan scroll jika konten melebihi tinggi modal */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Gaya untuk form input dalam modal */
+.modal-form label {
+    font-weight: 600;
+}
+
+.modal-form input,
+.modal-form select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Responsivitas modal */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        max-width: 100%;
+        max-height: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 100%;
+        max-height: 95%;
+    }
+
+    .modal-form input,
+    .modal-form select {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Gaya untuk navbar */
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #2d3748;
+    border-bottom: 1px solid #4a5568;
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu li {
+    margin: 0;
+}
+
+.navbar-menu a {
+    color: #edf2f7;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: #e2e7ec;
+    text-decoration: underline;
+}
+
+/* Responsivitas */
+@media (max-width: 992px) {
+    .filter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filter-form select,
+    .filter-form input,
+    .filter-form button {
+        width: 100%;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-form {
+        gap: 5px;
+    }
+
+    .filter-form select,
+    .filter-form input,
+    .filter-form button {
+        font-size: 14px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-form select,
+    .filter-form input,
+    .filter-form button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
