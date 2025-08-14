@@ -1,0 +1,1 @@
+Membangun sistem informasi geografis berbasis web untuk visualisasi data penduduk di Kecamatan Linggo Sari Baganti. Menyediakan peta interaktif menggunakan Leaflet, desain responsif dengan Bootstrap, dan integrasi data dengan PHP dan JavaScript.
